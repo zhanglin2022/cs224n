@@ -1,0 +1,1 @@
+## Written: Understanding word2vec (26 points)
