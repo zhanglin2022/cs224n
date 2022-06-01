@@ -6,7 +6,7 @@ $$
 Your answer should be one line.  
 
 $$
--\sum_{w\in Vocab}{y_w}\log \left( \hat{y}_w \right) =-\left( \sum_{\begin{array}{c} w\in Vocab\\ w\ne o\\ \end{array}}^{}{y_w}\log \left( \begin{array}{c} \hat{y}_w\\\end{array} \right) +\mathrm{y}_o\log \left( \hat{y}_o \right) \right) =-\log \left( \hat{y}_o \right) 
+-\sum_{w\in Vocab}{y_w}\log \left( \hat{y}_w \right) =-\left(\sum_{\begin{array}{c} w\in Vocab\\ w\ne o\\ \end{array}}^{}{y_w}\log \left( \begin{array}{c} \hat{y}_w\\\end{array} \right) +\mathrm{y}_o\log \left( \hat{y}_o \right) \right) =-\log \left( \hat{y}_o \right) 
 $$
 
 
