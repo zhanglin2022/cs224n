@@ -18,7 +18,8 @@ def sigmoid(x):
     """
 
     ### YOUR CODE HERE (~1 Line)
-
+    e = 2.7183
+    s = 1 / (1 + np.power(e, (-1)*np.array(x, dtype=float)))
     ### END YOUR CODE
 
     return s
