@@ -65,6 +65,8 @@ def naiveSoftmaxLossAndGradient(
     ### Please use the provided softmax function (imported earlier in this file)
     ### This numerically stable implementation helps you avoid issues pertaining
     ### to integer overflow. 
+    softmaxOutputProbVec = softmax(np.dot(outsideVectors, centerWordVec))
+    loss = (-1) * np.log(softmaxOutputProbVec[outsideWordIdx])
 
     ### END YOUR CODE
 
