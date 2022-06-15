@@ -67,8 +67,10 @@ def naiveSoftmaxLossAndGradient(
     ### to integer overflow. 
     softmaxOutputProbVec = softmax(np.dot(outsideVectors, centerWordVec))
     loss = -np.log(softmaxOutputProbVec[outsideWordIdx])
-    gradCenterVec = -outsideVectors[outsideWordIdx] + np.dot(outsideVectors.transpose, softmaxOutputProbVec)
-
+    gradCenterVec = -outsideVectors[outsideWordIdx] + np.dot(outsideVectors.T, softmaxOutputProbVec)
+    # ensure the  shape of gradOutsideVecs
+    gradOutsideVecs = np.dot(np.reshape(softmaxOutputProbVec, (-1, 1)), np.reshape(centerWordVec, (1, -1)))
+    gradOutsideVecs[outsideWordIdx] = (softmaxOutputProbVec[outsideWordIdx] - 1) * centerWordVec
     ### END YOUR CODE
 
     return loss, gradCenterVec, gradOutsideVecs
